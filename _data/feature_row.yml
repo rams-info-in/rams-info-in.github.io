@@ -1,1 +1,7 @@
+- image_path: /assets/images/project1.png
+  title: "Computational Drug Discovery"
+  excerpt: "Completed project focused on analyzing drug–target interactions using computational approaches."
 
+- image_path: /assets/images/project2.png
+  title: "Deep Learning for Neuronal Cell Segmentation"
+  excerpt: "Ongoing project using deep learning for segmentation and automated cell counting."
