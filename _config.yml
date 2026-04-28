@@ -1,13 +1,27 @@
 # Site Settings
 title: "ABHIRAM | BIOINFORMATICS"
+name: "ABHIRAM S"
+email: s.abhiramofficial@gmail.com
 description: "Decoding life’s source code through the lens of logic."
 url: "https://rams-info-in.github.io"
 baseurl: ""
+repository: "rams-info-in/rams-info-in.github.io"
+locale: "en-US"
+timezone: "Asia/Kolkata"
+
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "aqua"
 
 # Formatting
 markdown: kramdown
+permalink: /:categories/:title/
+paginate: 5
+paginate_path: /page:num/
+
+
+include:
+  - _pages
+  
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -15,12 +29,14 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+search: true
 
 # Author Info
 author:
   name: "ABHIRAM S"
+  avatar: "/assets/images/bio-photo.jpg"
   bio: "Decoding life’s source code through the lens of logic!"
-  location: "Goa, India"
+  location: "Kerala, India"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -28,6 +44,15 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/rams-info-in"
+
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/"
 
 # Defaults
 defaults:
