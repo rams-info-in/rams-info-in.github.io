@@ -2,7 +2,7 @@
 title: "ABHIRAM | BIOINFORMATICS"
 name: "ABHIRAM S"
 email: s.abhiramofficial@gmail.com
-description: "Decoding life’s source code through the lens of logic."
+description: "Decoding life's source code through the lens of logic."
 url: "https://rams-info-in.github.io"
 baseurl: ""
 locale: "en-US"
@@ -36,7 +36,7 @@ search: true
 author:
   name: "ABHIRAM S"
   avatar: "/assets/images/bio-photo.jpg"
-  bio: "Decoding life’s source code through the lens of logic!"
+  bio: "Decoding life's source code through the lens of logic!"
   location: "Kerala, India"
   links:
     - label: "Email"
