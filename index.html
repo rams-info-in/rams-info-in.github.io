@@ -13,73 +13,236 @@ actions:
     url: "{{ '/contact/' | relative_url }}"
 ---
 
-<div style="max-width: 1120px; margin: 0 auto; padding: 2.5rem 0 1rem;">
+<style>
+  .home-shell {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 2.5rem 0 1rem;
+  }
 
-  <div style="margin-bottom: 1.8rem; overflow: hidden; border-radius: 16px; border: 1px solid rgba(255,255,255,0.12); background: linear-gradient(90deg, rgba(255,79,154,0.18), rgba(0,183,255,0.10)); box-shadow: 0 10px 30px rgba(0,0,0,0.20);">
-    <div style="white-space: nowrap; padding: 0.95rem 1.2rem; font-size: 1rem; color: #f3f3f3; letter-spacing: 0.02em;">
-      <strong style="color: #ff5da2;">Latest Update:</strong>
-      Selected for a summer internship at BITS Pilani, K K Birla Goa Campus, scheduled from June to July, focused on advancing computational and research experience in bioinformatics.
+  .news-ticker {
+    margin-bottom: 1.8rem;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: linear-gradient(90deg, rgba(255,79,154,0.18), rgba(0,183,255,0.10));
+    box-shadow: 0 10px 30px rgba(0,0,0,0.20);
+    position: relative;
+  }
+
+  .news-ticker-track {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0.95rem 0;
+    animation: ticker-scroll 22s linear infinite;
+    min-width: 200%;
+  }
+
+  .news-ticker-text {
+    display: inline-block;
+    padding-right: 4rem;
+    font-size: 1rem;
+    color: #f3f3f3;
+    letter-spacing: 0.02em;
+  }
+
+  .news-label {
+    color: #ff5da2;
+    font-weight: 700;
+  }
+
+  @keyframes ticker-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+    gap: 1.6rem;
+    align-items: stretch;
+    margin-bottom: 2rem;
+  }
+
+  .hero-main {
+    padding: 2.4rem;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(22,22,28,0.82), rgba(12,12,16,0.70));
+    border: 1px solid rgba(255,255,255,0.10);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.30);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .hero-name {
+    margin: 0 0 0.9rem;
+    color: #ff5da2;
+    font-size: 0.92rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    line-height: 1.08;
+    margin: 0 0 1.1rem;
+    font-weight: 800;
+  }
+
+  .hero-copy {
+    margin: 0;
+    max-width: 760px;
+    font-size: 1.12rem;
+    line-height: 1.95;
+    color: #dddddd;
+  }
+
+  .hero-side {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .glass-card {
+    padding: 1.4rem 1.3rem;
+    border-radius: 22px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.10);
+    box-shadow: 0 14px 40px rgba(0,0,0,0.22);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .glass-card.alt {
+    background: rgba(255,255,255,0.06);
+  }
+
+  .card-label-pink,
+  .card-label-blue {
+    margin: 0 0 0.45rem;
+    font-size: 0.88rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  .card-label-pink {
+    color: #ff5da2;
+  }
+
+  .card-label-blue {
+    color: #5fd7ff;
+  }
+
+  .glass-card h3 {
+    margin: 0 0 0.45rem;
+    font-size: 1.25rem;
+  }
+
+  .glass-card p {
+    margin: 0;
+    color: #d5d5d5;
+    line-height: 1.75;
+  }
+
+  .bottom-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .bottom-card {
+    padding: 1.5rem;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04));
+    border: 1px solid rgba(255,255,255,0.10);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .bottom-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+    font-size: 1.2rem;
+  }
+
+  .bottom-card p {
+    margin: 0;
+    color: #d8d8d8;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 900px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+      font-size: 2.25rem;
+    }
+
+    .news-ticker-track {
+      animation-duration: 28s;
+    }
+  }
+</style>
+
+<div class="home-shell">
+
+  <div class="news-ticker">
+    <div class="news-ticker-track">
+      <span class="news-ticker-text">
+        <span class="news-label">Latest Update:</span>
+        Selected for a summer internship at BITS Pilani, K K Birla Goa Campus, from June to July, to further strengthen my research and computational experience in bioinformatics.
+      </span>
+      <span class="news-ticker-text">
+        <span class="news-label">Latest Update:</span>
+        Selected for a summer internship at BITS Pilani, K K Birla Goa Campus, from June to July, to further strengthen my research and computational experience in bioinformatics.
+      </span>
     </div>
   </div>
 
-  <div style="display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr); gap: 1.6rem; align-items: stretch; margin-bottom: 2rem;">
-
-    <div style="padding: 2.4rem; border-radius: 28px; background: linear-gradient(180deg, rgba(22,22,28,0.82), rgba(12,12,16,0.70)); border: 1px solid rgba(255,255,255,0.10); box-shadow: 0 20px 60px rgba(0,0,0,0.30); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);">
-      <p style="margin: 0 0 0.9rem; color: #ff5da2; font-size: 0.92rem; letter-spacing: 0.18em; text-transform: uppercase;">
-        Abhiram S
-      </p>
-      <h2 style="font-size: 3rem; line-height: 1.08; margin: 0 0 1.1rem; font-weight: 800;">
-        Building at the intersection of biology, AI, and data.
-      </h2>
-      <p style="margin: 0; max-width: 760px; font-size: 1.12rem; line-height: 1.95; color: #dddddd;">
+  <div class="hero-grid">
+    <div class="hero-main">
+      <p class="hero-name">Abhiram S</p>
+      <h2 class="hero-title">Building at the intersection of biology, AI, and data.</h2>
+      <p class="hero-copy">
         I am a bioinformatics enthusiast focused on applying artificial intelligence, computational biology, and data science to meaningful biomedical challenges. My work centers on research-driven problem solving, image analysis, and computational discovery.
       </p>
     </div>
 
-    <div style="display: grid; gap: 1rem;">
-      <div style="padding: 1.4rem 1.3rem; border-radius: 22px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.10); box-shadow: 0 14px 40px rgba(0,0,0,0.22); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
-        <p style="margin: 0 0 0.45rem; color: #ff5da2; font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.12em;">
-          Current Focus
-        </p>
-        <h3 style="margin: 0 0 0.45rem; font-size: 1.25rem;">Neuronal Cell Segmentation</h3>
-        <p style="margin: 0; color: #d5d5d5; line-height: 1.75;">
-          Deep learning workflows for fluorescent cell segmentation and automated counting.
-        </p>
+    <div class="hero-side">
+      <div class="glass-card">
+        <p class="card-label-pink">Current Focus</p>
+        <h3>Neuronal Cell Segmentation</h3>
+        <p>Deep learning workflows for fluorescent cell segmentation and automated counting.</p>
       </div>
 
-      <div style="padding: 1.4rem 1.3rem; border-radius: 22px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.10); box-shadow: 0 14px 40px rgba(0,0,0,0.22); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
-        <p style="margin: 0 0 0.45rem; color: #5fd7ff; font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.12em;">
-          Research Direction
-        </p>
-        <h3 style="margin: 0 0 0.45rem; font-size: 1.25rem;">Computational Bioinformatics</h3>
-        <p style="margin: 0; color: #d5d5d5; line-height: 1.75;">
-          Integrating AI, biological data, and computational methods for impactful research.
-        </p>
+      <div class="glass-card alt">
+        <p class="card-label-blue">Research Direction</p>
+        <h3>Computational Bioinformatics</h3>
+        <p>Integrating AI, biological data, and computational methods for impactful research.</p>
       </div>
     </div>
-
   </div>
 
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; margin-bottom: 1.8rem;">
-    <div style="padding: 1.5rem; border-radius: 20px; background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04)); border: 1px solid rgba(255,255,255,0.10); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
-      <h3 style="margin-top: 0; margin-bottom: 0.6rem; font-size: 1.2rem;">Projects</h3>
-      <p style="margin: 0; color: #d8d8d8; line-height: 1.8;">
-        A growing portfolio of work spanning biomedical image analysis, drug discovery, and computational biology.
-      </p>
+  <div class="bottom-grid">
+    <div class="bottom-card">
+      <h3>Projects</h3>
+      <p>A growing portfolio of work spanning biomedical image analysis, drug discovery, and computational biology.</p>
     </div>
 
-    <div style="padding: 1.5rem; border-radius: 20px; background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04)); border: 1px solid rgba(255,255,255,0.10); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
-      <h3 style="margin-top: 0; margin-bottom: 0.6rem; font-size: 1.2rem;">Approach</h3>
-      <p style="margin: 0; color: #d8d8d8; line-height: 1.8;">
-        Blending scientific curiosity with practical computing to turn complex biological questions into structured, testable workflows.
-      </p>
+    <div class="bottom-card">
+      <h3>Approach</h3>
+      <p>Blending scientific curiosity with practical computing to turn complex biological questions into structured, testable workflows.</p>
     </div>
 
-    <div style="padding: 1.5rem; border-radius: 20px; background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04)); border: 1px solid rgba(255,255,255,0.10); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
-      <h3 style="margin-top: 0; margin-bottom: 0.6rem; font-size: 1.2rem;">Goal</h3>
-      <p style="margin: 0; color: #d8d8d8; line-height: 1.8;">
-        To contribute to research and healthcare innovation through thoughtful, data-driven bioinformatics solutions.
-      </p>
+    <div class="bottom-card">
+      <h3>Goal</h3>
+      <p>To contribute to research and healthcare innovation through thoughtful, data-driven bioinformatics solutions.</p>
     </div>
   </div>
 
