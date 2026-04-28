@@ -10,7 +10,7 @@ locale: "en-US"
 timezone: "Asia/Kolkata"
 
 remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "aqua"
+minimal_mistakes_skin: "neon"
 
 # Formatting
 markdown: kramdown
