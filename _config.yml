@@ -12,6 +12,9 @@ timezone: "Asia/Kolkata"
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "neon"
 
+enable_copy_code_button: true
+breadcrumbs: true
+
 # Formatting
 markdown: kramdown
 permalink: /:categories/:title/
