@@ -17,7 +17,7 @@ baseurl: ""
 # in the templates via {{ site.myvariable }}.
 title: "ABHIRAM S | BIOINFORMATICS"
 email: s.abhiramofficial@gmail.com
-description: >- "Decoding life’s source code through the lens of logic!"
+description: "Decoding life’s source code through the lens of logic!"
 twitter_username: username
 github_username: username
 minimal_mistakes_skin: contrast
