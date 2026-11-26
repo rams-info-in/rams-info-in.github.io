@@ -1,249 +1,128 @@
 ---
-layout: splash
-title: "ABHIRAM S"
-header:
-  overlay_color: "#020202"
-  overlay_filter: "0.35"
-  overlay_image: /assets/images/banner.jpg
-  caption: "Bioinformatics | AI | Research"
-actions:
-  - label: "Explore Projects"
-    url: "{{ '/projects/' | relative_url }}"
-  - label: "Get in Touch"
-    url: "{{ '/contact/' | relative_url }}"
+layout: single
+classes: wide
+author_profile: false
+permalink: /
 ---
 
-<style>
-  .home-shell {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 2.5rem 0 1rem;
-  }
+<div class="portfolio-home">
 
-  .news-ticker {
-    margin-bottom: 1.8rem;
-    overflow: hidden;
-    border-radius: 16px;
-    border: 1px solid rgba(255,255,255,0.12);
-    background: linear-gradient(90deg, rgba(255,79,154,0.18), rgba(0,183,255,0.10));
-    box-shadow: 0 10px 30px rgba(0,0,0,0.20);
-    position: relative;
-  }
+  <section class="portfolio-hero" aria-labelledby="portfolio-title">
+    <div class="hero-copy">
+      <p class="eyebrow">Abhiram S <span>·</span> Bioinformatics</p>
 
-  .news-ticker-track {
-    display: inline-block;
-    white-space: nowrap;
-    padding: 0.95rem 0;
-    animation: ticker-scroll 22s linear infinite;
-    min-width: 200%;
-  }
+      <h1 id="portfolio-title">
+        From cell images to microbial genomes, I use computation to ask
+        <em>better biological questions.</em>
+      </h1>
 
-  .news-ticker-text {
-    display: inline-block;
-    padding-right: 4rem;
-    font-size: 1rem;
-    color: #f3f3f3;
-    letter-spacing: 0.02em;
-  }
-
-  .news-label {
-    color: #ff5da2;
-    font-weight: 700;
-  }
-
-  @keyframes ticker-scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  .hero-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
-    gap: 1.6rem;
-    align-items: stretch;
-    margin-bottom: 2rem;
-  }
-
-  .hero-main {
-    padding: 2.4rem;
-    border-radius: 28px;
-    background: linear-gradient(180deg, rgba(22,22,28,0.82), rgba(12,12,16,0.70));
-    border: 1px solid rgba(255,255,255,0.10);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.30);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-  }
-
-  .hero-name {
-    margin: 0 0 0.9rem;
-    color: #ff5da2;
-    font-size: 0.92rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-  }
-
-  .hero-title {
-    font-size: 3rem;
-    line-height: 1.08;
-    margin: 0 0 1.1rem;
-    font-weight: 800;
-  }
-
-  .hero-copy {
-    margin: 0;
-    max-width: 760px;
-    font-size: 1.12rem;
-    line-height: 1.95;
-    color: #dddddd;
-  }
-
-  .hero-side {
-    display: grid;
-    gap: 1rem;
-  }
-
-  .glass-card {
-    padding: 1.4rem 1.3rem;
-    border-radius: 22px;
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.10);
-    box-shadow: 0 14px 40px rgba(0,0,0,0.22);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
-
-  .glass-card.alt {
-    background: rgba(255,255,255,0.06);
-  }
-
-  .card-label-pink,
-  .card-label-blue {
-    margin: 0 0 0.45rem;
-    font-size: 0.88rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-  }
-
-  .card-label-pink {
-    color: #ff5da2;
-  }
-
-  .card-label-blue {
-    color: #5fd7ff;
-  }
-
-  .glass-card h3 {
-    margin: 0 0 0.45rem;
-    font-size: 1.25rem;
-  }
-
-  .glass-card p {
-    margin: 0;
-    color: #d5d5d5;
-    line-height: 1.75;
-  }
-
-  .bottom-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.2rem;
-    margin-bottom: 1.8rem;
-  }
-
-  .bottom-card {
-    padding: 1.5rem;
-    border-radius: 20px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04));
-    border: 1px solid rgba(255,255,255,0.10);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-  }
-
-  .bottom-card h3 {
-    margin-top: 0;
-    margin-bottom: 0.6rem;
-    font-size: 1.2rem;
-  }
-
-  .bottom-card p {
-    margin: 0;
-    color: #d8d8d8;
-    line-height: 1.8;
-  }
-
-  @media (max-width: 900px) {
-    .hero-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .hero-title {
-      font-size: 2.25rem;
-    }
-
-    .news-ticker-track {
-      animation-duration: 28s;
-    }
-  }
-</style>
-
-<div class="home-shell">
-
-  <div class="news-ticker">
-    <div class="news-ticker-track">
-      <span class="news-ticker-text">
-        <span class="news-label">Latest Update:</span>
-        Selected for a summer internship at BITS Pilani, K K Birla Goa Campus, from June to July, to further strengthen my research and computational experience in bioinformatics.
-      </span>
-      <span class="news-ticker-text">
-        <span class="news-label">Latest Update:</span>
-        Selected for a summer internship at BITS Pilani, K K Birla Goa Campus, from June to July, to further strengthen my research and computational experience in bioinformatics.
-      </span>
-    </div>
-  </div>
-
-  <div class="hero-grid">
-    <div class="hero-main">
-      <p class="hero-name">Abhiram S</p>
-      <h2 class="hero-title">Building at the intersection of biology, AI, and data.</h2>
-      <p class="hero-copy">
-        I am a bioinformatics enthusiast focused on applying artificial intelligence, computational biology, and data science to meaningful biomedical challenges. My work centers on research-driven problem solving, image analysis, and computational discovery.
+      <p class="hero-intro">
+        I’m an MSc Bioinformatics student at Bharathiar University. My work
+        spans biological image analysis, genomics, protein informatics, and
+        machine learning, with a particular interest in making complex
+        biological data easier to interpret.
       </p>
-    </div>
 
-    <div class="hero-side">
-      <div class="glass-card">
-        <p class="card-label-pink">Current Focus</p>
-        <h3>Neuronal Cell Segmentation</h3>
-        <p>Deep learning workflows for fluorescent cell segmentation and automated counting.</p>
-      </div>
-
-      <div class="glass-card alt">
-        <p class="card-label-blue">Research Direction</p>
-        <h3>Computational Bioinformatics</h3>
-        <p>Integrating AI, biological data, and computational methods for impactful research.</p>
+      <div class="hero-actions">
+        <a class="portfolio-button" href="{{ '/projects/' | relative_url }}">
+          Explore projects <span aria-hidden="true">↗</span>
+        </a>
+        <a class="text-link" href="{{ '/about/' | relative_url }}">More about me</a>
       </div>
     </div>
-  </div>
 
-  <div class="bottom-grid">
-    <div class="bottom-card">
-      <h3>Projects</h3>
-      <p>A growing portfolio of work spanning biomedical image analysis, drug discovery, and computational biology.</p>
+    <aside class="field-note" aria-label="A note on my approach">
+      <p class="field-note-label">A note on my approach</p>
+      <p class="field-note-quote">
+        “I like the questions that appear where biology meets data.”
+      </p>
+      <p class="field-note-credit">Abhiram S</p>
+
+      <div class="field-note-detail">
+        <span>Currently studying</span>
+        <strong>MSc Bioinformatics</strong>
+        <span>Bharathiar University · 2025–present</span>
+      </div>
+    </aside>
+  </section>
+
+  <section class="interest-section" aria-labelledby="interest-title">
+    <div>
+      <p class="eyebrow">Research interests</p>
+      <h2 id="interest-title">Questions I keep coming back to</h2>
+    </div>
+    <div class="interest-list">
+      <span>Deep learning for biological images</span>
+      <span>Genomics and multi-omics</span>
+      <span>Protein language models</span>
+      <span>Neuroinformatics</span>
+      <span>Computational drug discovery</span>
+    </div>
+  </section>
+
+  <section class="featured-section" aria-labelledby="featured-title">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Selected work</p>
+        <h2 id="featured-title">A few questions I’m working on</h2>
+      </div>
+      <a class="text-link" href="{{ '/projects/' | relative_url }}">
+        All projects <span aria-hidden="true">↗</span>
+      </a>
     </div>
 
-    <div class="bottom-card">
-      <h3>Approach</h3>
-      <p>Blending scientific curiosity with practical computing to turn complex biological questions into structured, testable workflows.</p>
+    <div class="featured-grid">
+      {% assign featured_projects = site.data.projects | where: "featured", true %}
+      {% for project in featured_projects limit: 3 %}
+      <article class="featured-card">
+        <p class="project-category">{{ project.category | escape }}</p>
+        <h3>
+          <a href="{{ '/projects/' | relative_url }}#{{ project.id | escape }}">
+            {{ project.title | escape }}
+          </a>
+        </h3>
+        <p>{{ project.summary | escape }}</p>
+        {% if project.status %}
+        <span class="project-status">{{ project.status | escape }}</span>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="education-section" aria-labelledby="education-title">
+    <div>
+      <p class="eyebrow">Education</p>
+      <h2 id="education-title">Training in biology and computation</h2>
     </div>
 
-    <div class="bottom-card">
-      <h3>Goal</h3>
-      <p>To contribute to research and healthcare innovation through thoughtful, data-driven bioinformatics solutions.</p>
+    <div class="education-list">
+      <article>
+        <span class="education-dates">2025–present</span>
+        <div>
+          <h3>MSc Bioinformatics</h3>
+          <p>Bharathiar University · Coimbatore, India</p>
+        </div>
+      </article>
+
+      <article>
+        <span class="education-dates">2022–2025</span>
+        <div>
+          <h3>BSc Life Sciences (Zoology) and Computational Biology</h3>
+          <p>St. Pius X College · CGPA 9.3/10</p>
+        </div>
+      </article>
     </div>
-  </div>
+  </section>
+
+  <section class="contact-band">
+    <div>
+      <p class="eyebrow">Get in touch</p>
+      <h2>Interested in research conversations and collaborations.</h2>
+    </div>
+    <a class="portfolio-button" href="{{ '/contact/' | relative_url }}">
+      Contact me <span aria-hidden="true">↗</span>
+    </a>
+  </section>
 
 </div>
