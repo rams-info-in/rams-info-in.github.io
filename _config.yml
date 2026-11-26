@@ -36,7 +36,7 @@ search: true
 author:
   name: "ABHIRAM S"
   avatar: "/assets/images/bio-photo.jpg"
-  bio: "Decoding life's source code through the lens of logic!"
+  bio: "MSc Bioinformatics student exploring computational biology and data-driven research."
   location: "Kerala, India"
   links:
     - label: "Email"
@@ -45,15 +45,18 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/rams-info-in"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/abhiram-s-107abb384/"
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/rams-info-in"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/abhiram-s-107abb384/"
 
 # Defaults
 defaults:
