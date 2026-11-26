@@ -1,42 +1,73 @@
 ---
-title: "About Me"
+title: "About"
 permalink: /about/
 layout: single
+classes: wide
+author_profile: false
 ---
 
-**Hi, I'm Abhiram**
+<div class="profile-page">
 
-I am a passionate student exploring the intersection of Bioinformatics, Artificial Intelligence, and Computational Biology. I enjoy transforming biological data into meaningful insights using computational approaches.
+<p class="eyebrow">A little about my work</p>
 
+<p class="profile-lead">
+I’m Abhiram, a bioinformatics student interested in how computational methods
+can help us understand biological systems—from images of cells to genomes,
+proteins, and disease-associated networks.
+</p>
 
-**EDUCATION**
+I’m currently pursuing an MSc in Bioinformatics at Bharathiar University.
+Before that, I completed a BSc in Life Sciences (Zoology) and Computational
+Biology at St. Pius X College, where I graduated with a CGPA of 9.3/10.
 
-BHARATHIAR UNIVERSITY, Coimbatore, Tamil Nadu
+My projects have taken me through biomedical image analysis, transcriptomics,
+metagenomics, protein informatics, and computational drug discovery. I enjoy
+learning a method carefully, understanding what its output can and cannot say,
+and connecting it back to the biological question.
 
-Master of Science in Bioinformatics, 2025 - Present
+## Education
 
-Relevant Coursework: Python, C++, Perl, R, Linux, Structural Bioinformatics, NGS, Functional Genomics, Pharmacogenomics, Biostatistics
+**MSc Bioinformatics**  
+Bharathiar University, Coimbatore · 2025–present
 
+**BSc Life Sciences (Zoology) and Computational Biology**  
+St. Pius X College · 2022–2025 · CGPA 9.3/10
 
-ST. PIUS X COLLEGE, KANNUR UNIVERSITY, Kasaragod, Kerala
+## Research interests
 
-Bachelor of Science in Life Sciences (Zoology) and Computational Biology, 2022 - 2025
+<div class="interest-columns">
+  <section>
+    <h3>Images and neuroscience</h3>
+    <ul>
+      <li>Deep learning for biological image analysis</li>
+      <li>Neuroinformatics and medical imaging</li>
+      <li>Neural networks for gene expression analysis</li>
+    </ul>
+  </section>
 
-Relevant Coursework: Bioinformatics tools & algorithms, Molecular & Cell Biology, Microbiology, Genomics, Proteomics, Cell Biology, Human Genetics
+  <section>
+    <h3>Genomes and systems</h3>
+    <ul>
+      <li>NGS and transcriptomics</li>
+      <li>Multi-omics integration</li>
+      <li>Functional genomics and precision medicine</li>
+    </ul>
+  </section>
 
+  <section>
+    <h3>Proteins and discovery</h3>
+    <ul>
+      <li>Structural bioinformatics</li>
+      <li>Protein language models</li>
+      <li>AI-driven drug discovery</li>
+    </ul>
+  </section>
+</div>
 
-**My Areas of Interest**
+## Tools I use
 
-- AI in Healthcare
-- Deep Learning for Biological Image Analysis
-- Genomics & Precision Medicine
-- Structural Bioinformatics
-- NGS data analysis, RNA-seq
-- Multi-omics data integration
-- Metabolomics and Systems Biology
-- Neuroinformatics
-- Data Science for Biology
+Python, R, Linux, PyTorch, TensorFlow/Keras, scikit-learn, WGCNA, and
+computational methods for genomics, protein structure analysis, and molecular
+screening.
 
-**Goal**
-
-To become a bioinformatics professional who bridges biology and technology, contributing to advancements in healthcare and life sciences.
+</div>
