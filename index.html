@@ -1,0 +1,102 @@
+---
+layout: portfolio
+title: "Abhiram S | Bioinformatics"
+description: "Bioinformatics research across biological imaging, genomics, protein informatics, and computational discovery."
+permalink: /
+---
+
+<div class="home-page">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow hero-kicker"><span class="status-dot" aria-hidden="true"></span> Research portfolio <span class="eyebrow-separator">/</span> Kerala, India</p>
+      <h1>Life leaves signals.<br><em>I study the patterns.</em></h1>
+      <p class="hero-intro">
+        I’m Abhiram, an MSc Bioinformatics student exploring how computation can
+        help us read biological images, genomes, proteins, and disease systems.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="{{ '/projects/' | relative_url }}">Explore my research <span aria-hidden="true">↗</span></a>
+        <a class="text-action" href="{{ '/about/' | relative_url }}">A little about me <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-footnote">
+        <span class="tiny-index">01 / FIELD OF VIEW</span>
+        <span>Computational biology, with the biological question in view.</span>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-label="Portrait and interactive research map">
+      <div class="visual-grid" aria-hidden="true"></div>
+      <div class="visual-halo halo-one" aria-hidden="true"></div>
+      <div class="visual-halo halo-two" aria-hidden="true"></div>
+
+      <figure class="portrait">
+        <img src="{{ '/assets/images/bio-photo.jpg' | relative_url }}" alt="Portrait of Abhiram S">
+        <figcaption><span>ABHIRAM S</span><span>COMPUTATIONAL BIOLOGY</span></figcaption>
+      </figure>
+
+      <div class="float-label float-label-top" aria-hidden="true">
+        <span class="float-label-index">RESEARCH NOTE / 01</span>
+        <span>Look for the signal</span>
+      </div>
+
+      <button class="research-orbit orbit-imaging"
+              type="button"
+              data-open-dialog
+              data-dialog-kicker="Research lens / 01"
+              data-dialog-title="Biological images"
+              data-dialog-copy="I’m exploring deep-learning approaches to segment and count fluorescent neuronal cells, and Vision Transformer models for Parkinson’s MRI classification."
+              data-dialog-href="{{ '/projects/' | relative_url }}?filter=imaging"
+              aria-label="Open research note about biological image analysis">
+        <span class="orbit-dot" aria-hidden="true"></span><span>Images</span>
+      </button>
+
+      <button class="research-orbit orbit-omics"
+              type="button"
+              data-open-dialog
+              data-dialog-kicker="Research lens / 02"
+              data-dialog-title="Genomes and systems"
+              data-dialog-copy="My work includes wastewater metagenomics, transcriptomic analysis, and network approaches to biological questions."
+              data-dialog-href="{{ '/projects/' | relative_url }}?filter=genomics"
+              aria-label="Open research note about genomics and systems biology">
+        <span class="orbit-dot" aria-hidden="true"></span><span>Genomes</span>
+      </button>
+
+      <button class="research-orbit orbit-protein"
+              type="button"
+              data-open-dialog
+              data-dialog-kicker="Research lens / 03"
+              data-dialog-title="Protein informatics"
+              data-dialog-copy="I’m interested in combining protein sequence representations with biological knowledge, and using structural methods to explore molecular questions."
+              data-dialog-href="{{ '/projects/' | relative_url }}?filter=protein"
+              aria-label="Open research note about protein informatics">
+        <span class="orbit-dot" aria-hidden="true"></span><span>Proteins</span>
+      </button>
+
+      <div class="float-label float-label-bottom" aria-hidden="true">
+        <span class="signal-line"></span><span>DATA → BIOLOGY</span>
+      </div>
+    </div>
+  </section>
+
+  {% assign featured_projects = site.data.projects | where: "featured", true %}
+  {% assign first_project = featured_projects | first %}
+  {% if first_project %}
+  <section class="featured-project" aria-labelledby="featured-title">
+    <div class="featured-meta">
+      <span class="tiny-index">SELECTED WORK / 01</span>
+      <span class="featured-status"><span class="status-dot" aria-hidden="true"></span> {{ first_project.status | default: "Research project" | escape }}</span>
+    </div>
+    <div class="featured-main">
+      <p class="eyebrow">{{ first_project.category | escape }}</p>
+      <h2 id="featured-title">{{ first_project.title | escape }}</h2>
+      <a class="round-link" href="{{ '/projects/' | relative_url }}#{{ first_project.id | escape }}" aria-label="Read about {{ first_project.title | escape }}">↗</a>
+    </div>
+    <a class="featured-more" href="{{ '/projects/' | relative_url }}">Open the research index <span aria-hidden="true">↗</span></a>
+  </section>
+  {% endif %}
+
+  <section class="closing-note">
+    <p>Curious about a question, method, or possible collaboration?</p>
+    <a href="{{ '/contact/' | relative_url }}">Let’s talk <span aria-hidden="true">↗</span></a>
+  </section>
+</div>
