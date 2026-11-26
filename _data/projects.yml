@@ -1,0 +1,61 @@
+# Project content lives here so updates do not require editing page templates.
+# Add a new item by copying one entry. Keep "id" unique and lowercase.
+# "filter" must match one of the buttons in _pages/projects.md.
+# Set featured: true for the homepage feature.
+
+- id: neuronal-cell-segmentation
+  title: "Deep learning for fluorescent neuronal cell segmentation"
+  category: "Biomedical image analysis"
+  filter: "imaging"
+  status: "Ongoing"
+  featured: true
+  summary: "Comparing pretrained deep-learning approaches to segment and count fluorescent neuronal cells, with the aim of reducing manual annotation and improving consistency."
+
+- id: parkinsons-mri-classification
+  title: "Vision Transformer models for Parkinson’s disease classification"
+  category: "Neuroinformatics"
+  filter: "neuro"
+  status: "Ongoing"
+  summary: "Exploring baseline and Vision Transformer models for binary and multiclass classification of Parkinson’s disease from MRI images."
+
+- id: neurosymbolic-protein-models
+  title: "Adding biological knowledge to protein language models"
+  category: "Protein informatics"
+  filter: "protein"
+  summary: "Exploring how Gene Ontology relationships, curated UniProt annotations, and physicochemical properties can be integrated with ESM-2 sequence representations to support protein prediction and interpretation."
+
+- id: honeybee-venom-database
+  title: "A genomic and proteomic database for honeybee venom"
+  category: "Biological databases"
+  filter: "genomics"
+  summary: "Designed a specialized database for genomic and proteomic information on Apis mellifera venom using SQLite and Python."
+
+- id: wastewater-metagenomics
+  title: "Metagenomic analysis of wastewater microbiomes"
+  category: "Microbial genomics"
+  filter: "genomics"
+  summary: "Analyzed wastewater metagenomes from five Chennai locations, comparing microbial diversity, profiling antimicrobial-resistance genes, and reconstructing metagenome-assembled genomes."
+
+- id: gonorrhoeae-pangenomics
+  title: "Virulence and resistance genes in Neisseria gonorrhoeae"
+  category: "Comparative genomics"
+  filter: "genomics"
+  summary: "Used a pan-genomic approach to investigate virulence and antimicrobial-resistance genes across multiple strains, including the virulence-associated FtsY protein."
+
+- id: covid-transcriptomics
+  title: "Gene modules and regulatory networks in COVID-19"
+  category: "Transcriptomics"
+  filter: "genomics"
+  summary: "Used WGCNA to map relationships between gene modules and COVID-19 traits, then applied machine-learning classification to shortlist two candidate genes."
+
+- id: tbi-network-pharmacology
+  title: "Gut bacterial metabolites and traumatic brain injury"
+  category: "Network pharmacology"
+  filter: "network"
+  summary: "Integrated gut bacterial metabolites with traumatic-brain-injury targets, identifying 36 overlapping targets and TNF as a central network hub. Butyrate was assessed as a potential binding candidate."
+
+- id: abutilon-gonorrhoeae
+  title: "Plant-derived compounds against drug-resistant Neisseria gonorrhoeae"
+  category: "Computational drug discovery"
+  filter: "discovery"
+  summary: "Modeled the FtsY protein and virtually screened compounds from Abutilon theophrasti. Chrysoeriol emerged as a candidate with favorable predicted properties and a docking score of −6.9 kcal/mol."
