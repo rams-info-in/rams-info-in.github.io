@@ -2,19 +2,35 @@
 title: "Projects"
 permalink: /projects/
 layout: single
+classes: wide
+author_profile: false
 ---
 
-## Image segmentation and object detection of fluorescent neuronal cells using a pretrained deep learning model (ongoing project)
+<div class="projects-page">
+  <header class="projects-intro">
+    <p class="eyebrow">Research and computational work</p>
+    <h1>Projects</h1>
+    <p>
+      A collection of questions I’ve explored across biological imaging,
+      genomics, protein informatics, and computational discovery. I’ll add
+      methods, figures, and fuller write-ups as each project develops.
+    </p>
+  </header>
 
-![Neuronal Cell Segmentation]({{ '/assets/images/project2.png' | relative_url }})
+  <div class="project-grid">
+    {% for project in site.data.projects %}
+    <article class="project-card" id="{{ project.id | escape }}">
+      <div class="project-card-top">
+        <span class="project-index">PROJECT {{ forloop.index | prepend: '0' }}</span>
+        {% if project.status %}
+        <span class="project-status">{{ project.status | escape }}</span>
+        {% endif %}
+      </div>
 
-- In this project I am working with machine learning, deep learning, and Python programming to identify the most accurate model for the study.
-- The goal is to automate the segmentation and counting of fluorescent neuronal cells to improve efficiency and reduce manual annotation errors in biomedical research.
-
-## Illuminating the antimicrobial activities of small molecules present in _Abutilon theophrasti_ against drug-resistant _Neisseria gonorrhoeae_: an in-silico approach
-
-![Computational Drug Discovery]({{ '/assets/images/project1.png' | relative_url }})
-
-- Targeted the unexplored virulent FtsY protein of _Neisseria gonorrhoeae_ to address multidrug resistance, modeled its 3D structure through homology modeling, and validated it using structural analysis tools because no experimentally resolved crystallographic structure was available.
-- Created and evaluated a virtual screening phytochemical database from _Abutilon theophrasti_.
-- Identified Chrysoeriol as a top candidate with favorable pharmacokinetics and a strong binding affinity (-6.9 kcal/mol), outperforming the control antibiotic ceftriaxone against the target.
+      <p class="project-category">{{ project.category | escape }}</p>
+      <h2>{{ project.title | escape }}</h2>
+      <p class="project-summary">{{ project.summary | escape }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</div>
